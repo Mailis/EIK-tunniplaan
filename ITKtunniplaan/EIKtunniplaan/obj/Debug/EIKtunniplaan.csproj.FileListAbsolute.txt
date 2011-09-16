@@ -1,0 +1,16 @@
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\ApplicationIcon.png
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\Background.png
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\EIKtunniplaan.dll
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\EIKtunniplaan.pdb
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\AppManifest.xaml
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\EIKtunniplaan.xap
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\App.g.i.cs
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\MainPage.g.i.cs
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\EIKtunniplaan.g.resources
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\EIKtunniplaan.dll
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\EIKtunniplaan.pdb
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\XapCacheFile.xml
+C:\Users\mtoompuu\Desktop\EIKtunnikas\EIKtunniplaan\EIKtunniplaan\obj\Debug\Nadal.g.i.cs

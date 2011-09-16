@@ -1,0 +1,195 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="EIKtunniplaan.Nadal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape"
+    shell:SystemTray.IsVisible="True">
+    
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <controls:Pivot  Name="PrognoosiPivot" Title="IT KOLLEDŽI TUNNIPLAAN">
+
+                <!--Pivot item one-->
+                <controls:PivotItem Header="Esmaspäev">
+
+
+
+
+                    <!--Double line list with text wrapping-->
+                    <ListBox  x:Name="FirstListBox" Margin="0,-20,0,0" ItemsSource="{Binding esmasp}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                    <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                    <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                    <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                    <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                    <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+
+                <!--Pivot item two-->
+                <controls:PivotItem Header="Teisipäev">
+                    <!--Double line list with text wrapping-->
+                    <ListBox x:Name="SecondListBox" Margin="12,0,12,0" ItemsSource="{Binding teisip}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+                <!--Pivot item three-->
+                <controls:PivotItem Header="Kolmapäev">
+                    <!--Double line list with text wrapping-->
+                    <ListBox x:Name="ThirdListBox" Margin="12,0,12,0" ItemsSource="{Binding kolmap}" Height="544">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+                <!--Pivot item four-->
+                <controls:PivotItem Header="Neljapäev">
+                    <!--Double line list with text wrapping-->
+                    <ListBox x:Name="FourthListBox" Margin="12,0,12,0" ItemsSource="{Binding neljap}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+                <!--Pivot item five-->
+                <controls:PivotItem Header="Reede">
+                    <!--Double line list with text wrapping-->
+                    <ListBox x:Name="FifthListBox" Margin="12,0,12,0" ItemsSource="{Binding reede}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+                <!--Pivot item six-->
+                <controls:PivotItem Header="Laupäev">
+                    <!--Double line list with text wrapping-->
+                    <ListBox x:Name="SixthListBox" Margin="12,0,12,0" ItemsSource="{Binding laup}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+                <!--Pivot item seven-->
+                <controls:PivotItem Header="Pühapäev">
+                    <!--Double line list with text wrapping-->
+                    <ListBox x:Name="SeventhListBox" Margin="12,0,12,0" ItemsSource="{Binding pyhap}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <TextBlock x:Name="Kuupaev" Text="{Binding Alguskellaaeg}" Margin="0,40,0,0"  FontFamily="Courier New" Foreground="#FFFFFF" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock x:Name="Kellad" Text="{Binding Kellaaeg}" Margin="0,-10,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+                                <TextBlock x:Name="Ruum" Text="{Binding Ruum}" Margin="0,0,0,0" Style="{StaticResource  PhoneTextTitle2Style}"/>
+                                <TextBlock x:Name="Ainenimi" Text="{Binding Ainenimi}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle3Style}"/>
+                                <TextBlock x:Name="Oppejoud" Text="{Binding Oppejoud}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Ruhmad" Text="{Binding Ruhmad}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Tyyp" Text="{Binding Tyyp}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Periood" Text="{Binding Periood}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Sagedus" Text="{Binding Sagedus}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                <TextBlock x:Name="Voor" Text="{Binding Voor}" TextWrapping="Wrap" Margin="0,0,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+
+            </controls:Pivot>
+       
+    </Grid>
+
+    
+</phone:PhoneApplicationPage>
